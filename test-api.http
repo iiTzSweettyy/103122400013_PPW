@@ -1,0 +1,52 @@
+### 1. GET All Downloads
+GET http://localhost:3000/downloads
+
+### 2. POST Create Download (Sukses - 201)
+POST http://localhost:3000/downloads
+Content-Type: application/json
+
+{
+  "title": "Tutorial Web Dev 2026",
+  "url": "https://www.youtube.com/watch?v=sample123",
+  "format": "mp4-1080",
+  "fileSizeMb": 65.5,
+  "status": "pending"
+}
+
+### 3. POST Create Download (Validasi Gagal - 400 Bad Request)
+POST http://localhost:3000/downloads
+Content-Type: application/json
+
+{
+  "title": "Ab",
+  "url": "bukan-url-valid",
+  "format": "format-salah"
+}
+
+### 4. POST Create Download (ConflictException - 409 URL Duplikat)
+POST http://localhost:3000/downloads
+Content-Type: application/json
+
+{
+  "title": "Duplikat URL",
+  "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  "format": "mp4-720"
+}
+
+### 5. GET Find One by ID (Sukses - 200)
+GET http://localhost:3000/downloads/1
+
+### 6. GET Find One by ID (NotFoundException - 404)
+GET http://localhost:3000/downloads/999
+
+### 7. PATCH Update Download (Sukses - 200)
+PATCH http://localhost:3000/downloads/1
+Content-Type: application/json
+
+{
+  "status": "selesai",
+  "format": "mp4-1080"
+}
+
+### 8. DELETE Download (Sukses - 200)
+DELETE http://localhost:3000/downloads/1

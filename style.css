@@ -1,0 +1,171 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    background-color: #ecc9c9;
+}
+
+.container,
+.video-card,
+form,
+table {
+    margin: 0 auto 20px auto;
+    width: 100%;
+    max-width: 600px;
+}
+
+.container,
+.video-card,
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input,
+select,
+button,
+label {
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+#yt-url {
+    width: 100%;
+    max-width: 400px;
+    padding: 8px;
+    text-align: center;
+}
+
+#download-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    max-width: 700px;
+    gap: 10px;
+}
+
+#download-form label {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+
+#yt-url {
+    flex: 1;
+    min-width: 250px;
+    padding: 15px 20px;
+    font-size: 16px;
+    border: 3px solid #FF0000;
+    border-radius: 4px;
+    text-align: left;
+    outline: none;
+    margin: 0 !important;
+}
+
+
+#download-form button {
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #FF0000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 !important;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#download-form button:hover {
+    background-color: #CC0000;
+}
+
+.video-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.video-card img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 6px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.video-card h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.video-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+
+
+table {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table thead {
+    background-color: #ff0000;
+    color: white;
+}
+
+table th,
+table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+table th {
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+table tbody tr:hover {
+    background-color: #f5f5f5;
+    transition: background-color 0.2s;
+}
+
+table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.link-panduan a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.link-panduan a:hover {
+    color: #666666;
+    text-decoration: underline;
+}
